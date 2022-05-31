@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  pharmacy-config:
+      image: ${PRIVATE_DOCKER_REGISTRY}/webapp:latest
+      pull_policy: always
+      environment:
+        SPRING_PROFILES_ACTIVE: development
+      ports:
+        - 8080:8080
